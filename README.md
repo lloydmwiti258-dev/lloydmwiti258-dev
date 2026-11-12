@@ -51,6 +51,10 @@ My foundation is quantitative: a **BSc in Actuarial Science** (KCA University), 
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white"/>
+<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white"/>
+<img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white"/>
+<img src="https://img.shields.io/badge/Chart.js-FF6384?style=flat-square&logo=chartdotjs&logoColor=white"/>
+<img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white"/>
 <img src="https://img.shields.io/badge/Google%20Sheets%20API-34A853?style=flat-square&logo=googlesheets&logoColor=white"/>
 <img src="https://img.shields.io/badge/Odoo%20POS-714B67?style=flat-square&logo=odoo&logoColor=white"/>
 <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white"/>
@@ -60,6 +64,41 @@ My foundation is quantitative: a **BSc in Actuarial Science** (KCA University), 
 ---
 
 ## 🚀 Featured Projects
+
+### 📊 Customer Retention & Analytics Platform — Python · Flask · BI ⭐ *Flagship*
+> A full-stack business-intelligence platform for a multi-branch retailer. It turns raw POS records in Google Sheets into a live dashboard covering **retention, CAC/LTV, regional performance, churn risk and product bundling**.
+
+<p>
+  <img src="https://img.shields.io/badge/20%2B-Branches-2C5364?style=flat-square" alt="20+ branches"/>
+  <img src="https://img.shields.io/badge/9-Regions-203A43?style=flat-square" alt="9 regions"/>
+  <img src="https://img.shields.io/badge/6-Time%20Grains-2C7DA0?style=flat-square" alt="6 time grains"/>
+  <img src="https://img.shields.io/badge/15-REST%20Endpoints-2EA043?style=flat-square" alt="15 REST endpoints"/>
+  <img src="https://img.shields.io/badge/15%2B-Interactive%20Charts-0F2027?style=flat-square" alt="15+ charts"/>
+</p>
+
+```mermaid
+flowchart LR
+    A[("Google Sheets<br/>POS data")] -->|gspread · retry/backoff| B["Extract & Clean"]
+    B --> C["KPI Engine<br/>retention · CAC · LTV · cohorts"]
+    C --> D[("2-tier cache")]
+    D --> E["Flask REST API"]
+    E --> F["Chart.js dashboard"]
+    E --> G["Excel exports"]
+    style C fill:#203A43,stroke:#2C7DA0,color:#ffffff
+    style F fill:#2C5364,stroke:#2C7DA0,color:#ffffff
+```
+
+- **ETL pipeline** from Google Sheets: retry with exponential backoff, regex price cleaning, a shop-to-region dimension, and phone-based customer IDs
+- **Retention analytics** at day, week, month, quarter, half-year and year level, plus cumulative **New vs Returning** cohorts
+- **Unit economics**: CAC, LTV and period-over-period growth rates, linking marketing spend to acquisition
+- **Cross-shop origin analysis** showing whether new branches win new customers or move existing ones from other shops
+- **RFM-style recency segmentation** with one-click **Excel win-back lists**, plus **market-basket bundle mining**
+- **Performance**: replaced an O(n×m) per-customer scan with vectorised pandas grouping; shop data lazy-loads on demand
+- **Secure deployment**: environment-based secrets, Vercel/Gunicorn ready, logic checked against mock datasets
+
+`Python` `pandas` `Flask` `REST API` `Chart.js` `Google Sheets API` `ETL` `Retention` `CAC/LTV` · 📂 [View repo](https://github.com/lloydmwiti258-dev/CUSTOMER-RETENTION-AND-ANALYTICS)
+
+---
 
 ### ☀️ Sunrise SQL Project — PostgreSQL
 > SQL analysis project on the Sunrise dataset, covering data exploration, cleaning and business queries.
