@@ -72,8 +72,8 @@ My foundation is quantitative: a **BSc in Actuarial Science** (KCA University), 
   <img src="https://img.shields.io/badge/20%2B-Branches-2C5364?style=flat-square" alt="20+ branches"/>
   <img src="https://img.shields.io/badge/9-Regions-203A43?style=flat-square" alt="9 regions"/>
   <img src="https://img.shields.io/badge/6-Time%20Grains-2C7DA0?style=flat-square" alt="6 time grains"/>
-  <img src="https://img.shields.io/badge/15-REST%20Endpoints-2EA043?style=flat-square" alt="15 REST endpoints"/>
-  <img src="https://img.shields.io/badge/15%2B-Interactive%20Charts-0F2027?style=flat-square" alt="15+ charts"/>
+  <img src="https://img.shields.io/badge/13-API%20Endpoints-2EA043?style=flat-square" alt="13 API endpoints"/>
+  <img src="https://img.shields.io/badge/16-Interactive%20Charts-0F2027?style=flat-square" alt="16 charts"/>
 </p>
 
 ```mermaid
