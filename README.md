@@ -100,6 +100,41 @@ flowchart LR
 
 ---
 
+### 🏭 Production Planning & Demand Forecasting — Python · PostgreSQL · Odoo 🆕 *New*
+> A planning platform that turns **one monthly revenue target** into a demand forecast for every product and shop, the **raw materials to buy**, and **daily min/max stock levels** for every outlet. All of it comes from live Odoo ERP data.
+
+<p>
+  <img src="https://img.shields.io/badge/600k%2B-POS%20Order%20Lines-2C5364?style=flat-square" alt="600k+ POS order lines"/>
+  <img src="https://img.shields.io/badge/20%20%C2%B7%208-Channels%20%C2%B7%20Regions-203A43?style=flat-square" alt="20 channels, 8 regions"/>
+  <img src="https://img.shields.io/badge/1%E2%80%9312-Month%20Horizon-2C7DA0?style=flat-square" alt="1-12 month horizon"/>
+  <img src="https://img.shields.io/badge/7-Planning%20Dashboards-2EA043?style=flat-square" alt="7 planning dashboards"/>
+  <img src="https://img.shields.io/badge/100%25-Target%20Reconciliation-0F2027?style=flat-square" alt="100% target reconciliation"/>
+</p>
+
+```mermaid
+flowchart LR
+    A[("Odoo ERP<br/>POS · BoM · stock · dispatch")] -->|SQL · snapshot · cache| B["Demand forecast<br/>seasonality + momentum"]
+    B --> C["Scale to target<br/>shop reconciliation"]
+    C --> D["Material requirements<br/>BoM explosion"]
+    C --> E["Min / Max stock<br/>run-rate · lead times"]
+    D & E --> F["7-tab planning dashboard"]
+    style B fill:#203A43,stroke:#2C7DA0,color:#ffffff
+    style C fill:#203A43,stroke:#2C7DA0,color:#ffffff
+    style F fill:#2C5364,stroke:#2C7DA0,color:#ffffff
+```
+
+- **Forecasting model**: each month's forecast blends the same month last year with the last three months' trend. It covers 1–12 months and is scaled to the revenue target.
+- **Cold start**: new shops and products borrow growth from regional peers, then the region, then the whole portfolio, instead of being blended with a false "zero last year".
+- **Hierarchical reconciliation**: bottom-up shop forecasts now sum to **exactly** the company target. Before, they overshot by ~10%.
+- **MRP**: projected units are multiplied through each product's Bill of Materials to give the raw materials needed.
+- **Inventory**: min/max levels come from a blend of planned and actual sales pace, plus each shop's measured dispatch lead time.
+- **Data engineering**: advanced PostgreSQL (CTEs, ROLLUP, FILTER), a snapshot of closed months built from 600k+ order lines, and a cache that serves old data while it refreshes
+- **Data quality**: fixed bundles counted three times, corrected pooled outlet revenue, and reconciled stock totals with the stock report
+
+`Python` `Flask` `PostgreSQL` `Odoo` `Demand Forecasting` `MRP` `Inventory Optimisation` `Data Engineering` · 📂 [View repo](https://github.com/lloydmwiti258-dev/production-planning-forecasting)
+
+---
+
 ### ☀️ Sunrise SQL Project — PostgreSQL
 > SQL analysis project on the Sunrise dataset, covering data exploration, cleaning and business queries.
 
