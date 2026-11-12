@@ -65,7 +65,7 @@ My foundation is quantitative: a **BSc in Actuarial Science** (KCA University), 
 
 ## 🚀 Featured Projects
 
-### 📊 Customer Retention & Analytics Platform — Python · Flask · BI ⭐ *Flagship*
+### 📊 [Customer Retention & Analytics Platform](https://github.com/lloydmwiti258-dev/customer-Retention-and-journey-Analysis) — Python · Flask · BI ⭐ *Flagship*
 > A full-stack business-intelligence platform for a multi-branch retailer. It turns raw POS records in Google Sheets into a live dashboard covering **retention, CAC/LTV, regional performance, churn risk and product bundling**.
 
 <p>
@@ -96,7 +96,7 @@ flowchart LR
 - **Performance**: replaced an O(n×m) per-customer scan with vectorised pandas grouping; shop data lazy-loads on demand
 - **Secure deployment**: environment-based secrets, Vercel/Gunicorn ready, logic checked against mock datasets
 
-`Python` `pandas` `Flask` `REST API` `Chart.js` `Google Sheets API` `ETL` `Retention` `CAC/LTV` · 📂 [View repo](https://github.com/lloydmwiti258-dev/CUSTOMER-RETENTION-AND-ANALYTICS)
+`Python` `pandas` `Flask` `REST API` `Chart.js` `Google Sheets API` `ETL` `Retention` `CAC/LTV` · 📂 [View project overview](https://github.com/lloydmwiti258-dev/customer-Retention-and-journey-Analysis)
 
 ---
 
